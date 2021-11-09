@@ -2,7 +2,7 @@
 
 ## [M1S01] - Ex 1 - Primeiros passos
 
-Em uma pasta apropriada crie um documento HTML5, chamado "index.html", em que a linguagem seja português do Brasil, o conjunto de caracteres seja UTF-8, e que o conteúdo preencha toda a área do navegador, com o título na aba de "DEV in House". O corpo deve conter um título (h1) com o conteúdo "Semana 1" e um parágrafo contendo o texto "Este é o resultado do primeiro exercício da primeira semana do curso DEVinHouse.".
+Em uma pasta apropriada crie um documento HTML5, chamado **"index.html"**, em que a linguagem seja português do Brasil, o conjunto de caracteres seja UTF-8, e que o conteúdo preencha toda a área do navegador, com o título na aba de "DEV in House". O corpo deve conter um título (h1) com o conteúdo "Semana 1" e um parágrafo contendo o texto "Este é o resultado do primeiro exercício da primeira semana do curso DEVinHouse.".
 
 No mesmo documento, adicione uma linha horizontal entre o título e o parágrafo, e duas quebras de linha no parágrafo, uma logo após a palavra "exercício" e outra logo após a palavra "semana".
 
@@ -21,7 +21,7 @@ Dica: https://www.w3schools.com/html/html_images.asp
 
 ## [M1S01] - Ex 3 - Adicione estilos
 
-No index, do Exercício 1, adicione um arquivo CSS e mude o estilo do título de nível 1 para que a fonte seja Verdana, com tamanho de 20 pixels e cor marrom (sugestão).
+No **index**, do Exercício 1, adicione um arquivo CSS e mude o estilo do título de nível 1 para que a fonte seja Verdana, com tamanho de 20 pixels e cor marrom (sugestão).
 
 Nesse mesmo documento, utilizando CSS: centralize o título, mude a cor de fundo da página para amarelo (sugestão) e mude o tamanho da fonte dos parágrafos para 14 pixels.
 
@@ -58,7 +58,7 @@ Dica: https://www.w3schools.com/html/html_youtube.asp
 
 ## [M1S01] - Ex 8 - Navegar é preciso
 
-Crie um menu no topo da página index que fique sempre fixo enquanto você rola a página para baixo, contendo um logo do lado esquerdo e uma lista das páginas do site à direita: "Home" para o index.html e "Imagens" para a página com as imagens.
+Crie um menu no topo da página **index** que fique sempre fixo enquanto você rola a página para baixo, contendo um logo do lado esquerdo e uma lista das páginas do site à direita: "Home" para o **index.html** e "Imagens" para a página com as imagens.
 
 Dica: https://www.w3schools.com/howto/howto_css_fixed_menu.asp
 
