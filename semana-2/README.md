@@ -2,11 +2,11 @@
 
 ## [M1S02] - Ex 1 - Primeiros passos
 
-Em uma pasta apropriada crie um documento HTML5, chamado "index.html", em que a linguagem seja português do Brasil, o conjunto de caracteres seja UTF-8, e que o conteúdo preencha toda a área do navegador, com o título na aba de "DEV in House". O corpo deve conter um título (h1) com o conteúdo "Semana 2" e um parágrafo contendo o texto "Este é o resultado do primeiro exercício da segunda semana do curso DEVinHouse.".
+Em uma pasta apropriada crie um documento HTML5, chamado **"index.html"**, em que a linguagem seja português do Brasil, o conjunto de caracteres seja UTF-8, e que o conteúdo preencha toda a área do navegador, com o título na aba de "DEV in House". O corpo deve conter um título (h1) com o conteúdo "Semana 2" e um parágrafo contendo o texto "Este é o resultado do primeiro exercício da segunda semana do curso DEVinHouse.".
 
 No mesmo documento, adicione uma linha horizontal entre o título e o parágrafo, e duas quebras de linha no parágrafo, uma logo após a palavra "exercício" e outra logo após a palavra "semana".
 
-Criar uma pasta com o nome de "scripts", em seguida, crie um arquivo com o nome "script.js".
+Criar uma pasta com o nome de **"scripts"**, em seguida, crie um arquivo com o nome **"script.js"**.
 
 No mesmo documento, insira algum emoji de sua escolha no parágrafo.
 
@@ -35,21 +35,21 @@ Dica: https://developer.mozilla.org/pt-BR/docs/Web/API/Window/alert
 
 ## [M1S02] - Ex 5 - Pergunte ao usuário
 
-Para realizar esse exercício, utilize o console do navegador.
+**_Para realizar esse exercício, utilize o console do navegador._**
 
 Pergunte ao usuário:
 
-1. nome (prompt);
-2. idade (prompt);
-3. gosta de praticar algum esporte? (confirm)
+1. nome (**prompt**);
+2. idade (**prompt**);
+3. gosta de praticar algum esporte? (**confirm**)
 
-Crie 3 variáveis para guardar as respostas do usuário:
+Crie <ins>3 variáveis</ins> para guardar as respostas do usuário:
 
-1. deve receber um valor textual (string);
-2. deve receber um valor numérico (number);
-3. deve receber um valor de verdadeiro ou falso (boolean).
+1. deve receber um valor textual (**string**);
+2. deve receber um valor numérico (**number**);
+3. deve receber um valor de verdadeiro ou falso (**boolean**).
 
-Faça com que esses 3 valores sejam exibidos no console do navegador.
+Faça com que esses 3 valores sejam exibidos no <ins>**console do navegador**</ins>.
 
 Dica: https://developer.mozilla.org/pt-BR/docs/Web/API/window/prompt  
 https://developer.mozilla.org/pt-BR/docs/Web/API/window/confirm
@@ -61,14 +61,14 @@ Faça 2 prompts ao usuário:
 1. no primeiro, pergunte o seu sobrenome;
 2. no segundo, pergunte o seu nome.
 
-Em seguida, exiba na tela um "alert", contendo o nome completo do usuário, na ordem correta (ou seja: Nome Sobrenome).
+Em seguida, exiba na tela um **"alert"**, contendo o nome completo do usuário, na ordem correta (**ou seja: Nome Sobrenome**).
 
 Dica: https://developer.mozilla.org/pt-BR/docs/Web/API/Window/alert  
 https://developer.mozilla.org/pt-BR/docs/Web/API/window/prompt
 
 ## [M1S02] - Ex 7 - Pergunte o último sobrenome e exiba em letras maiúsculas, junto do tamanho
 
-Pergunte ao usuário seu último sobrenome e em seguida exiba na tela um "alert" contendo o texto "Olá, X. Seu sobrenome contém y letras", onde X é o sobrenome em letras maiúsculas, e y é a quantidade de letras desse sobrenome.
+Pergunte ao usuário seu último sobrenome e em seguida exiba na tela um **"alert"** contendo o texto **"Olá, X. Seu sobrenome contém Y letras"**, onde **X** é o sobrenome em letras maiúsculas, e **Y** é a quantidade de letras desse sobrenome.
 
 Dica: https://developer.mozilla.org/pt-BR/docs/Web/API/Window/alert  
 https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/length  
@@ -81,7 +81,7 @@ Faça 2 prompts ao usuário:
 1. no primeiro, pergunte o ano de nascimento;
 2. no segundo, pergunte o ano atual.
 
-Em seguida, exiba na tela um "alert" contendo o texto "Sua idade é x ou y", onde x é a idade do usuário, caso ele já tenha feito aniversário neste ano, e y é a idade caso ele ainda não tenha aniversariado no ano corrente.
+Em seguida, exiba na tela um **"alert"** contendo o texto **"Sua idade é X ou Y"**, onde **X** é a idade do usuário, caso ele já tenha feito aniversário neste ano, e **Y** é a idade caso ele ainda não tenha aniversariado no ano corrente.
 
 Dica: https://developer.mozilla.org/pt-BR/docs/Web/API/Window/alert  
 https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/Math
@@ -94,7 +94,7 @@ Faça 3 prompts ao usuário:
 2. no segundo, pergunte o primeiro valor que deseja calcular;
 3. no terceiro, o segundo valor que deseja calcular.
 
-Em seguida, realize o cálculo e exiba na tela um "alert" contendo o texto "O resultado do seu cálculo é: X", onde X é o resultado final do cálculo solicitado pelo usuário.
+Em seguida, realize o cálculo e exiba na tela um **"alert"** contendo o texto **"O resultado do seu cálculo é: X"**, onde **X** é o resultado final do cálculo solicitado pelo usuário.
 
 Dica: https://developer.mozilla.org/pt-BR/docs/Web/API/Window/alert  
 https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/Math
@@ -115,9 +115,9 @@ Ao entrar na página, seu script deve realizar 2 prompts ao usuário:
 
 Após o usuário inserir esses valores, o seu script deve calcular os 10 primeiros valores da sequência e exibir na tela.
 
-Relembrando: P.A. (Progressão Aritmética) é uma sequência numérica em que cada termo, a partir do segundo, é igual à soma do termo anterior com a raiz.
+**<ins style="color:red">Relembrando</ins>**: **P.A.** (**Progressão Aritmética**) é uma sequência numérica em que cada termo, a partir do segundo, é igual à soma do termo anterior com a raiz.
 
-Exemplo: Valor inicial = 1; raiz = 3; P.A. = 1, 4, 7, 10, 13, 16, 19, 22, 25, 28.
+**<ins style="color:blue">Exemplo</ins>**: **Valor inicial = 1; raiz = 3; P.A. = 1, 4, 7, 10, 13, 16, 19, 22, 25, 28.**
 
 Dica: https://matematicabasica.net/progressao-aritmetica  
 https://www.javascriptprogressivo.net/2018/12/progressao-aritmetica-pa-em-javascript.html
