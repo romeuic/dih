@@ -5,7 +5,8 @@
 Em uma pasta apropriada crie um documento HTML5, chamado "index.html", em que a linguagem seja português do Brasil, o conjunto de caracteres seja UTF-8, e que o conteúdo preencha toda a área do navegador, com o título na aba de "DEV in House". O corpo deve conter um título (h1) com o conteúdo "Semana 1" e um parágrafo contendo o texto "Este é o resultado do primeiro exercício da primeira semana do curso DEVinHouse.".
 No mesmo documento, adicione uma linha horizontal entre o título e o parágrafo, e duas quebras de linha no parágrafo, uma logo após a palavra "exercício" e outra logo após a palavra "semana".
 No mesmo documento, insira algum emoji de sua escolha no parágrafo.
-Dica: https://emojipedia.org -> Codepoints -> "U+" por "&#x"
+
+Dica: https://emojipedia.org -> Codepoints -> "U+" por "&#x"  
 https://www.andiamo.co.uk/resources/iso-language-codes
 
 ## [M1S01] - Ex 2 - Utilizando imagens
