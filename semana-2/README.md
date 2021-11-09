@@ -10,7 +10,7 @@ Criar uma pasta com o nome de "scripts", em seguida, crie um arquivo com o nome 
 
 No mesmo documento, insira algum emoji de sua escolha no parágrafo.
 
-Dica: https://emojipedia.org -> Codepoints -> "U+" por "&#x"
+Dica: https://emojipedia.org -> Codepoints -> "U+" por "&#x"  
 https://www.andiamo.co.uk/resources/iso-language-codes
 
 ## [M1S02] - Ex 2 - Alerte o usuário
@@ -18,13 +18,13 @@ https://www.andiamo.co.uk/resources/iso-language-codes
 Utilizando Javascript, emita um alerta para o usuário com uma informação importante.
 
 Dica: Lembre-se da estrutura "scripts" criada no exercício anterior.  
- https://developer.mozilla.org/pt-BR/docs/Web/API/Window/alert
+https://developer.mozilla.org/pt-BR/docs/Web/API/Window/alert
 
 ## [M1S02] - Ex 3 - Faça com que o usuário confirme antes de seguir
 
 Utilizando Javascript, peça a confirmação do usuário ao clicar em algum botão, perguntando se ele deseja realmente realizar essa ação.
 
-Dica: Lembre-se da estrutura "scripts" criada no exercício anterior.
+Dica: Lembre-se da estrutura "scripts" criada no exercício anterior.  
 https://developer.mozilla.org/pt-BR/docs/Web/API/Window/alert
 
 ## [M1S02] - Ex 4 - Peça o nome do usuário e exiba na tela
@@ -51,7 +51,7 @@ Crie 3 variáveis para guardar as respostas do usuário:
 
 Faça com que esses 3 valores sejam exibidos no console do navegador.
 
-Dica: https://developer.mozilla.org/pt-BR/docs/Web/API/window/prompt
+Dica: https://developer.mozilla.org/pt-BR/docs/Web/API/window/prompt  
 https://developer.mozilla.org/pt-BR/docs/Web/API/window/confirm
 
 ## [M1S02] - Ex 6 - Pergunte nome e sobrenome e exiba na tela
@@ -63,15 +63,15 @@ Faça 2 prompts ao usuário:
 
 Em seguida, exiba na tela um "alert", contendo o nome completo do usuário, na ordem correta (ou seja: Nome Sobrenome).
 
-Dica: https://developer.mozilla.org/pt-BR/docs/Web/API/Window/alert
+Dica: https://developer.mozilla.org/pt-BR/docs/Web/API/Window/alert  
 https://developer.mozilla.org/pt-BR/docs/Web/API/window/prompt
 
 ## [M1S02] - Ex 7 - Pergunte o último sobrenome e exiba em letras maiúsculas, junto do tamanho
 
 Pergunte ao usuário seu último sobrenome e em seguida exiba na tela um "alert" contendo o texto "Olá, X. Seu sobrenome contém y letras", onde X é o sobrenome em letras maiúsculas, e y é a quantidade de letras desse sobrenome.
 
-Dica: https://developer.mozilla.org/pt-BR/docs/Web/API/Window/alert
-https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/length
+Dica: https://developer.mozilla.org/pt-BR/docs/Web/API/Window/alert  
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/length  
 https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 
 ## [M1S02] - Ex 8 - Pergunte o ano atual e o ano de nascimento, exiba na tela a idade
@@ -83,7 +83,7 @@ Faça 2 prompts ao usuário:
 
 Em seguida, exiba na tela um "alert" contendo o texto "Sua idade é x ou y", onde x é a idade do usuário, caso ele já tenha feito aniversário neste ano, e y é a idade caso ele ainda não tenha aniversariado no ano corrente.
 
-Dica: https://developer.mozilla.org/pt-BR/docs/Web/API/Window/alert
+Dica: https://developer.mozilla.org/pt-BR/docs/Web/API/Window/alert  
 https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/Math
 
 ## [M1S02] - Ex 9 - Construa uma calculadora
@@ -96,15 +96,15 @@ Faça 3 prompts ao usuário:
 
 Em seguida, realize o cálculo e exiba na tela um "alert" contendo o texto "O resultado do seu cálculo é: X", onde X é o resultado final do cálculo solicitado pelo usuário.
 
-Dica: https://developer.mozilla.org/pt-BR/docs/Web/API/Window/alert
+Dica: https://developer.mozilla.org/pt-BR/docs/Web/API/Window/alert  
 https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/Math
 
 ## [M1S02] - Ex 10 - Alerte as horas para o usuário
 
 Construa um script que alerta o horário no momento de acesso, no formato "23:59" (HH:mm).
 
-Dica: Lembre-se da estrutura "scripts" criada no exercício anterior.
-https://codare.aurelio.net/2009/04/03/javascript-obter-e-mostrar-data-e-hora/
+Dica: Lembre-se da estrutura "scripts" criada no exercício anterior.  
+https://codare.aurelio.net/2009/04/03/javascript-obter-e-mostrar-data-e-hora
 
 ## [M1S02] - Ex 11 - Construa uma calculadora de P.A.
 
@@ -119,5 +119,5 @@ Relembrando: P.A. (Progressão Aritmética) é uma sequência numérica em que c
 
 Exemplo: Valor inicial = 1; raiz = 3; P.A. = 1, 4, 7, 10, 13, 16, 19, 22, 25, 28.
 
-Dica: https://matematicabasica.net/progressao-aritmetica/
+Dica: https://matematicabasica.net/progressao-aritmetica  
 https://www.javascriptprogressivo.net/2018/12/progressao-aritmetica-pa-em-javascript.html
