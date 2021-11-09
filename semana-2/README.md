@@ -115,9 +115,9 @@ Ao entrar na página, seu script deve realizar 2 prompts ao usuário:
 
 Após o usuário inserir esses valores, o seu script deve calcular os 10 primeiros valores da sequência e exibir na tela.
 
-**<ins style="color:red">Relembrando</ins>**: **P.A.** (**Progressão Aritmética**) é uma sequência numérica em que cada termo, a partir do segundo, é igual à soma do termo anterior com a raiz.
+**<ins>Relembrando</ins>**: **P.A.** (**Progressão Aritmética**) é uma sequência numérica em que cada termo, a partir do segundo, é igual à soma do termo anterior com a raiz.
 
-**<ins style="color:blue">Exemplo</ins>**: **Valor inicial = 1; raiz = 3; P.A. = 1, 4, 7, 10, 13, 16, 19, 22, 25, 28.**
+**<ins>Exemplo</ins>**: **Valor inicial = 1; raiz = 3; P.A. = 1, 4, 7, 10, 13, 16, 19, 22, 25, 28.**
 
 Dica: https://matematicabasica.net/progressao-aritmetica  
 https://www.javascriptprogressivo.net/2018/12/progressao-aritmetica-pa-em-javascript.html
