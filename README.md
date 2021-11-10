@@ -1,2 +1,3 @@
-# dih-exercicios
-Repositório dos exercícios resolvidos do curso DiH 2021/2
+# Código fonte do DiH
+
+Repositório com códigos vistos do curso DiH 2021/2
