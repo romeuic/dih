@@ -59,8 +59,6 @@ function adiciona() {
       feito: false
     }
 
-    lista.push(item)
-
     const novoElemento = document.createElement('li')
 
     novoElemento.id = `item-${item.id}`
@@ -80,6 +78,8 @@ function adiciona() {
     `
 
     ulAtividades.appendChild(novoElemento)
+
+    lista.push(item)
 
     console.log("LISTA->", { lista })
 
