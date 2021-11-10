@@ -18,6 +18,7 @@ function limpaCampo() {
   campo.value = ''
 }
 
+// remove uma das atividades
 function removeItem(index) {
   const novaLista = []
 
@@ -34,6 +35,7 @@ function removeItem(index) {
   lista = novaLista
 }
 
+// marca ou desmarca atividade
 function marcaFeito(index) {
   if (lista[index]) {
     const item = lista[index]
