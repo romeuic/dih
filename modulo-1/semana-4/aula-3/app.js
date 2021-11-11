@@ -10,12 +10,48 @@ let lista = []
 // pega conteúdo do localStorage
 let listaStorage = localStorage.getItem('lista-atividades')
 
-// verifica se existe conteúdo
+// verifica se existe conteúdo válido no localStorage
 if (listaStorage) {
-  // mostra no console se tiver
-  listaRestaurada = JSON.parse(listaStorage)
-  console.log(listaStorage)
-  console.log(listaRestaurada[0])
+  // restaura a lista
+  // lista = JSON.parse(listaStorage)
+  // console.log('RECUPEROU_DO_STORAGE', { lista })
+  // ...
+}
+
+function criaElementoNoDOM(item) {
+  // cria um novo item de lista html
+  const novoElemento = document.createElement('li')
+
+  // adiciona atributo id ao item html
+  novoElemento.id = item.id
+
+  // preenche o conteúdo do item html
+  novoElemento.innerHTML = `
+    <input
+      type="checkbox"
+      name="chk-${item.id}"
+      onclick="marcaFeito(${item.id})"
+    >
+    <label for="chk-${item.id}">
+      ${item.titulo}
+    </label>
+    <button onclick="removeItem(${item.id})">
+      &times;
+    </button>
+  `
+
+  // manda o item novo para o documento html
+  ulAtividades.appendChild(novoElemento)
+}
+
+function salvaEmLocalStorage() {
+  console.log('SALVA_EM_LOCAL_STORAGE', { lista })
+
+  // converte para string JSON
+  const listaJSON = JSON.stringify(lista)
+
+  // armazena do localStorage
+  localStorage.setItem('lista-atividades', listaJSON)
 }
 
 // apaga conteudo do campo
@@ -24,90 +60,79 @@ function limpaCampo() {
 }
 
 // remove uma das atividades
-function removeItem(index) {
+function removeItem(idItem) {
   // cria lista vazia
   const novaLista = []
 
   // preenche a lista nova com todos itens menos o removido
   for (let i = 0; i < lista.length; i++) {
     // se o item não for o removido, vai pra nova lista
-    if (i !== index) {
+    if (lista[i].id !== idItem) {
       novaLista.push(lista[i])
     }
   }
 
   // pega item a ser removido do html
-  const itemParaRemocao = document.getElementById(`item-${index}`)
+  const itemParaRemocao = document.getElementById(idItem)
   // remove ele do pai
   ulAtividades.removeChild(itemParaRemocao)
 
   // atualiza a lista com a lista nova
   lista = novaLista
+
+  salvaEmLocalStorage()
 }
 
 // marca ou desmarca atividade
-function marcaFeito(index) {
-  // verifica se existe esse índice na lista
-  if (lista[index]) {
-    // pega item da lista
-    const item = lista[index]
-  
-    // inverte o valor de feito
-    lista[index].feito = !(item.feito)
+function marcaFeito(idItem) {
+  // verifica idItem é valido
+  if (idItem) {
+    let item = null
 
-    // pega o elemento do html
-    const elemento = document.getElementById(`item-${index}`)
+    // procura item
+    for (let i = 0; i < lista.length; i++) {
+      if (lista[i].id === idItem) {
+        item = lista[i]
+      }
+    }
 
-    // atualiza a classe para riscar ou não
-    elemento.className = item.feito ? 'feito' : ''
+    // testa se encontrou um item
+    if (item) {
+      // inverte o valor de feito
+      item.feito = !(item.feito)
+
+      // pega o elemento do html
+      const elemento = document.getElementById(idItem)
+
+      // atualiza a classe para riscar ou não
+      elemento.className = item.feito ? 'feito' : ''
+
+      salvaEmLocalStorage()
+    }
   }
 }
 
 // adiciona itens a lista
-function adiciona() {
+function adicionaNovo() {
   // verifica se o campo não está vazio
   if (campo.value.length > 0) {
+    // encontra uma id unica
+    // baseada no millisegundo atual
+    const msAtual = new Date().getTime()
+
     // define o objeto do item a ser adicionado
     const item = {
-      id: lista.length,
+      id: msAtual,
       titulo: campo.value,
       feito: false
     }
 
-    // cria um novo item de lista html
-    const novoElemento = document.createElement('li')
-
-    // adiciona atributo id ao item html
-    novoElemento.id = `item-${item.id}`
-
-    // preenche o conteúdo do item html
-    novoElemento.innerHTML = `
-      <input
-        type="checkbox"
-        name="chk-${item.id}"
-        onclick="marcaFeito(${item.id})"
-      >
-      <label for="chk-${item.id}">
-        ${item.titulo}
-      </label>
-      <button onclick="removeItem(${item.id})">
-        &times;
-      </button>
-    `
-
-    // manda o item novo para o documento html
-    ulAtividades.appendChild(novoElemento)
+    criaElementoNoDOM(item)
 
     // adiciona também no vetor da lista
     lista.push(item)
 
-    console.log("LISTA->", { lista })
-
-    // converte para string JSON
-    const listaJSON = JSON.stringify(lista)
-
-    // armazena do localStorage
-    localStorage.setItem('lista-atividades', listaJSON)
+    salvaEmLocalStorage()
 
     limpaCampo()
   } else {
@@ -117,5 +142,5 @@ function adiciona() {
 }
 
 // vincula funções aos elementos html
-botaoAdd.addEventListener('click', adiciona)
+botaoAdd.addEventListener('click', adicionaNovo)
 botaoClear.addEventListener('click', limpaCampo)
