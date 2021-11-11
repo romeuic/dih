@@ -118,3 +118,4 @@ function adiciona() {
 
 // vincula funções aos elementos html
 botaoAdd.addEventListener('click', adiciona)
+botaoClear.addEventListener('click', limpaCampo)
