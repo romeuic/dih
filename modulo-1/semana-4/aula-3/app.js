@@ -29,8 +29,8 @@ function criaElementoNoDOM(item) {
   // preenche o conteúdo do item html
   novoElemento.innerHTML = `
     <input
+      id="chk-${item.id}"
       type="checkbox"
-      name="chk-${item.id}"
       onclick="marcaFeito(${item.id})"
     >
     <label for="chk-${item.id}">
