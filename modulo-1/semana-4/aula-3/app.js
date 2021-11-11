@@ -18,6 +18,7 @@ if (listaStorage) {
   // ...
 }
 
+// função para criar e adicionar item ao DOM
 function criaElementoNoDOM(item) {
   // cria um novo item de lista html
   const novoElemento = document.createElement('li')
@@ -44,6 +45,7 @@ function criaElementoNoDOM(item) {
   ulAtividades.appendChild(novoElemento)
 }
 
+// função para salvar lista em localStorage
 function salvaEmLocalStorage() {
   console.log('SALVA_EM_LOCAL_STORAGE', { lista })
 
@@ -54,12 +56,12 @@ function salvaEmLocalStorage() {
   localStorage.setItem('lista-atividades', listaJSON)
 }
 
-// apaga conteudo do campo
+// função para apagar conteudo do campo
 function limpaCampo() {
   campo.value = ''
 }
 
-// remove uma das atividades
+// função para remover uma das atividades
 function removeItem(idItem) {
   // cria lista vazia
   const novaLista = []
@@ -83,7 +85,7 @@ function removeItem(idItem) {
   salvaEmLocalStorage()
 }
 
-// marca ou desmarca atividade
+// função para marcar ou desmarcar atividade
 function marcaFeito(idItem) {
   // verifica idItem é valido
   if (idItem) {
@@ -112,7 +114,7 @@ function marcaFeito(idItem) {
   }
 }
 
-// adiciona itens a lista
+// função para adicionar itens a lista
 function adicionaNovo() {
   // verifica se o campo não está vazio
   if (campo.value.length > 0) {
