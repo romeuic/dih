@@ -86,7 +86,7 @@ ul.lista > li > label {
   flex-grow: 1;
 }
 
-li.feito > label {
+ul.lista > li.feito > label {
   text-decoration: line-through;
 }
 

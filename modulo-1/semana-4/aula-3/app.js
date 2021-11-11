@@ -13,7 +13,9 @@ let listaStorage = localStorage.getItem('lista-atividades')
 // verifica se existe conteúdo
 if (listaStorage) {
   // mostra no console se tiver
+  listaRestaurada = JSON.parse(listaStorage)
   console.log(listaStorage)
+  console.log(listaRestaurada[0])
 }
 
 // apaga conteudo do campo
@@ -51,7 +53,7 @@ function marcaFeito(index) {
     const item = lista[index]
   
     // inverte o valor de feito
-    item.feito = !(item.feito)
+    lista[index].feito = !(item.feito)
 
     // pega o elemento do html
     const elemento = document.getElementById(`item-${index}`)
