@@ -1,0 +1,22 @@
+@import "reset.css";
+@import "layout.css";
+
+form.formulario {
+  display: flex;
+  flex-direction: column;
+}
+
+form.formulario label {
+  margin: 5mm 0 2mm;
+}
+
+.escuro {
+  background-color: #282828;
+  color: #f0f0f0;
+}
+
+.centralizado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
