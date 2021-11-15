@@ -7,10 +7,11 @@ const historico = []
 function registrarNovaTransacao(evento) {
   evento.preventDefault()
 
-  const dados = new FormData(event.target)
-  const data = dados.get('data')
-  const preco = dados.get('preco')
-  const quantia = dados.get('quantia')
+  const dadosDoForm = new FormData(evento.target)
+
+  const data = dadosDoForm.get('data')
+  const preco = dadosDoForm.get('preco')
+  const quantia = dadosDoForm.get('quantia')
 
   const transacao = new Transacao(data, preco, quantia)
 
