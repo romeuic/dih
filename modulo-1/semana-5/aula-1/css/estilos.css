@@ -1,14 +1,6 @@
 @import "reset.css";
-@import "layout.css";
-
-form.formulario {
-  display: flex;
-  flex-direction: column;
-}
-
-form.formulario label {
-  margin: 5mm 0 2mm;
-}
+@import "leiaute.css";
+@import "formulario.css";
 
 .escuro {
   background-color: #282828;

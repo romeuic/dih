@@ -1,7 +1,8 @@
 html, body,
-form, label,
 div, header, main, footer,
-h1, h2, h3, h4, p, a {
+h1, h2, h3, h4, p, a,
+form, label, span,
+ul, ol, li {
   margin: 0;
   border: 0;
   padding: 0;

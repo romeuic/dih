@@ -1,5 +1,9 @@
-import Task from './task.js'
+import Transacao from './transacao.js'
 
-const task = new Task('Foo', 'Bar', false)
+const trans = new Transacao(new Date(), 6, 100)
 
-console.log('HI', task)
+console.log('HI', trans)
+
+const inputTitle = document.querySelector('#a-titulo')
+
+console.log(inputTitle)

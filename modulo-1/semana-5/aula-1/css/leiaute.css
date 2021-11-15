@@ -3,24 +3,30 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: #e2e2e2;
+  color: #323232;
 }
 
 header {
   width: 100%;
-  height: 25mm;
+  height: 15mm;
   overflow: hidden;
+}
+
+header h1 {
+  font-size: 1.25rem;
 }
 
 main {
   width: 200mm;
   max-width: calc(100vw - 50mm);
   padding: 10mm;
-  padding-bottom: calc(10mm + 15mm);
   flex-grow: 1;
   background-color: white;
 }
 
+/* para telas pequenas 600px ou menos */
 @media (max-width: 600px) {
+  /*  */
   main {
     max-width: 100vw;
   }
@@ -28,7 +34,7 @@ main {
 
 footer {
   width: 100%;
-  height: 15mm;
+  height: 10mm;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.25);
 }
