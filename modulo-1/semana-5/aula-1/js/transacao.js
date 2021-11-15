@@ -1,11 +1,11 @@
 export default class Transacao {
   data
-  quantia
   preco
+  quantia
 
-  constructor(data, quantia, preco) {
+  constructor(data, preco, quantia) {
     this.data = data
-    this.quantia = quantia
     this.preco = preco
+    this.quantia = quantia
   }
 }

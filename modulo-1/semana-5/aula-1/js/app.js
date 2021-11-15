@@ -1,9 +1,22 @@
 import Transacao from './transacao.js'
 
-const trans = new Transacao(new Date(), 6, 100)
+const formTrans = document.querySelector('#formulario-transacao')
 
-console.log('HI', trans)
+const historico = []
 
-const inputTitle = document.querySelector('#a-titulo')
+function registrarNovaTransacao(evento) {
+  evento.preventDefault()
 
-console.log(inputTitle)
+  const dados = new FormData(event.target)
+  const data = dados.get('data')
+  const preco = dados.get('preco')
+  const quantia = dados.get('quantia')
+
+  const transacao = new Transacao(data, preco, quantia)
+
+  historico.push(transacao)
+
+  console.log('HISTORICO', historico)
+}
+
+formTrans.addEventListener('submit', registrarNovaTransacao)
