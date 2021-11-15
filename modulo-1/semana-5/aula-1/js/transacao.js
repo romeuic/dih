@@ -1,4 +1,4 @@
-export default class Transacao {
+export class Transacao {
   data
   preco
   quantia

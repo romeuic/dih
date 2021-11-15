@@ -1,4 +1,4 @@
-import Transacao from './transacao.js'
+import { Transacao } from './transacao.js'
 
 const formTrans = document.querySelector('#formulario-transacao')
 const listaTrans = document.querySelector('#lista-transacoes')
