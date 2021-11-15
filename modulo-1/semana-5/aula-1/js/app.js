@@ -3,7 +3,7 @@ import { Transacao } from './transacao.js'
 const formTrans = document.querySelector('#formulario-transacao')
 const listaTrans = document.querySelector('#lista-transacoes')
 
-let historico = []
+const historico = []
 
 function registrarNovaTransacao(evento) {
   evento.preventDefault()
