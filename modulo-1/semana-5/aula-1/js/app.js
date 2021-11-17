@@ -3,7 +3,15 @@ import { Transacao } from './transacao.js'
 const formTrans = document.querySelector('#formulario-transacao')
 const listaTrans = document.querySelector('#lista-transacoes')
 
-const historico = []
+class Historico {
+  lista = []
+
+  armazena(item) {
+    this.lista.push(item)
+  }
+}
+
+const historico = new Historico()
 
 function registrarNovaTransacao(evento) {
   evento.preventDefault()
@@ -14,9 +22,11 @@ function registrarNovaTransacao(evento) {
   const preco = dadosDoForm.get('preco')
   const quantia = dadosDoForm.get('quantia')
 
+  //const transacao = new Transacao(data, preco, quantia)
+
   const transacao = new Transacao(data, preco, quantia)
 
-  historico.push(transacao)
+  historico.armazena(transacao)
 
   console.log('HISTORICO', historico)
 
@@ -27,13 +37,14 @@ function registrarNovaTransacao(evento) {
 function atualizarTela() {
   listaTrans.innerHTML = ''
 
-  for (let transacao of historico) {
+  for (let transacao of historico.lista) {
     const item = document.createElement('li')
 
     item.innerText = `
       Data: ${transacao.data}
       Preço: ${transacao.preco}
       Quantia: ${transacao.quantia}
+      Volume: ${transacao.volume()}
     `
 
     listaTrans.appendChild(item)

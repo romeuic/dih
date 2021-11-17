@@ -4,8 +4,12 @@ export class Transacao {
   quantia
 
   constructor(data, preco, quantia) {
-    this.data = data
+    this.data = new Date(data.replaceAll('-', '/'))
     this.preco = preco
     this.quantia = quantia
+  }
+
+  volume() {
+    return this.preco * this.quantia
   }
 }
