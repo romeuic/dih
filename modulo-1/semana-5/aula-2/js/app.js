@@ -4,10 +4,20 @@ const formTrans = document.querySelector('#formulario-transacao')
 const listaTrans = document.querySelector('#lista-transacoes')
 
 class Historico {
-  lista = []
+  static totalDeItensEmTodasInstancias = 0
+  #lista
+
+  constructor() {
+    this.#lista = []
+  }
 
   armazena(item) {
     this.lista.push(item)
+    Historico.totalDeItensEmTodasInstancias++
+  }
+
+  get lista() {
+    return this.#lista
   }
 }
 
@@ -44,7 +54,7 @@ function atualizarTela() {
       Data: ${transacao.data}
       Preço: ${transacao.preco}
       Quantia: ${transacao.quantia}
-      Volume: ${transacao.volume()}
+      Volume: ${transacao.volume}
     `
 
     listaTrans.appendChild(item)

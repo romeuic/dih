@@ -1,15 +1,31 @@
 export class Transacao {
-  data
-  preco
-  quantia
+  #data
+  #preco
+  #quantia
 
-  constructor(data, preco, quantia) {
-    this.data = new Date(data.replaceAll('-', '/'))
-    this.preco = preco
-    this.quantia = quantia
+  constructor(d, p, q) {
+    this.#data = new Date(d.replaceAll('-', '/'))
+    this.#preco = p
+    this.#quantia = q
   }
 
-  volume() {
-    return this.preco * this.quantia
+  get data() {
+    return Intl.DateTimeFormat().format(this.#data)
+  }
+
+  get preco() {
+    return Transacao.formataPreco(this.#preco)
+  }
+
+  get quantia() {
+    return `${this.#quantia} unidades`
+  }
+
+  get volume() {
+    return Transacao.formataPreco(this.#preco * this.#quantia)
+  }
+
+  static formataPreco(valor) {
+    return `R$ ${valor}`
   }
 }
