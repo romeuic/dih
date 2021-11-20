@@ -66,7 +66,7 @@ class Cliente {
       throw 'Parâmetro inválido!'
     }
 
-    if (!this.testaCPF(cpf)) {
+    if (!Cliente.testaCPF(cpf)) {
       throw 'CPF inválido!'
     }
 
@@ -75,7 +75,7 @@ class Cliente {
     this.endereco = end
     this.numeroDoCelular = cel
   }
-  testaCPF(strCPF) {
+  static testaCPF(strCPF) {
     let soma = 0
     let resto
 
