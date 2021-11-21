@@ -1,21 +1,15 @@
 const formTratefa = document.querySelector('#formulario-tarefa')
 const listaTarefas = document.querySelector('#lista-tarefas')
 
-const STRING = 'string'
-const NUMBER = 'number'
-const BOOLEAN = 'boolean'
-
 const todasTarefas = []
 
 class Item {
-  static #lastId = 0
+  static #nextId = 0
   #id
   descricao
 
-  constructor(desc) {
-    if (typeof desc !== STRING) return
-
-    this.#id = Item.#lastId++
+  constructor(desc = '') {
+    this.#id = Item.#nextId++
     this.descricao = desc
   }
 
@@ -35,8 +29,7 @@ class Tarefa extends Item {
   #status
 
   constructor(desc, stat = false) {
-    if (!super(desc)) return
-
+    super(desc)
     this.#status = stat
   }
 
@@ -50,7 +43,9 @@ class Tarefa extends Item {
     checkbox.type = 'checkbox'
     checkbox.checked = this.#status
     checkbox.onclick = function () {
-      this.#status = checkbox.checked
+      // isso funciona?
+      this.status = checkbox.checked
+      console.log(this)
     }
     const texto = document.createTextNode(this.descricao)
     li.appendChild(checkbox)
