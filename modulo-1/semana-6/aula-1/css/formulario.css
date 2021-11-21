@@ -1,0 +1,20 @@
+form.formulario {
+  display: flex;
+  flex-direction: column;
+}
+
+form.formulario label {
+  margin: 5mm 0 2mm;
+}
+
+form.formulario label:first-child {
+  margin-top: 0;
+}
+
+form.formulario input[type=text],
+form.formulario input[type=number],
+form.formulario textarea {
+  width: 100%;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
