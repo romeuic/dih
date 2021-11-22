@@ -25,43 +25,43 @@ class Item {
 }
 
 
-class Tarefa extends Item {
-  #status
+// class Tarefa extends Item {
+//   #status
 
-  constructor(desc, stat = false) {
-    super(desc)
-    this.#status = stat
-  }
+//   constructor(desc, stat = false) {
+//     super(desc)
+//     this.#status = stat
+//   }
 
-  set status(novoStatus) {
-    this.#status = !!novoStatus
-  }
+//   set status(novoStatus) {
+//     this.#status = !!novoStatus
+//   }
 
-  montaItem() {
-    const li = document.createElement('li')
-    const checkbox = document.createElement('input')
-    checkbox.type = 'checkbox'
-    checkbox.checked = this.#status
-    checkbox.onclick = function () {
-      // isso funciona?
-      this.status = checkbox.checked
-      console.log(this)
-    }
-    const texto = document.createTextNode(this.descricao)
-    li.appendChild(checkbox)
-    li.appendChild(texto)
-    return li
-  }
-}
+//   montaItem() {
+//     const li = document.createElement('li')
+//     const checkbox = document.createElement('input')
+//     checkbox.type = 'checkbox'
+//     checkbox.checked = this.#status
+//     checkbox.onclick = function () {
+//       // isso funciona?
+//       this.status = checkbox.checked
+//       console.log(this)
+//     }
+//     const texto = document.createTextNode(this.descricao)
+//     li.appendChild(checkbox)
+//     li.appendChild(texto)
+//     return li
+//   }
+// }
 
 function registrarNovaTarefa(evento) {
   evento.preventDefault()
 
   const dadosDoForm = new FormData(evento.target)
   const descricao = dadosDoForm.get('descricao')
-  const item = new Tarefa(descricao)
 
-  if (item.id === undefined) return
+  // chamada do construtor de uma nova instância
+  const item = new Item(descricao)
 
   todasTarefas.push(item)
 
