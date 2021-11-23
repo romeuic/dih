@@ -25,34 +25,30 @@ class Item {
 }
 
 
-// class Tarefa extends Item {
-//   #status
+class Tarefa extends Item {
+  #status
 
-//   constructor(desc, stat = false) {
-//     super(desc)
-//     this.#status = stat
-//   }
+  constructor(desc, stat = false) {
+    super(desc)
+    this.#status = stat
+  }
 
-//   set status(novoStatus) {
-//     this.#status = !!novoStatus
-//   }
+  montaItem() {
+    const li = document.createElement('li')
+    const checkbox = document.createElement('input')
+    checkbox.type = 'checkbox'
+    checkbox.checked = this.#status
 
-//   montaItem() {
-//     const li = document.createElement('li')
-//     const checkbox = document.createElement('input')
-//     checkbox.type = 'checkbox'
-//     checkbox.checked = this.#status
-//     checkbox.onclick = function () {
-//       // isso funciona?
-//       this.status = checkbox.checked
-//       console.log(this)
-//     }
-//     const texto = document.createTextNode(this.descricao)
-//     li.appendChild(checkbox)
-//     li.appendChild(texto)
-//     return li
-//   }
-// }
+    checkbox.onclick = () => {
+      this.#status = checkbox.checked
+    }
+
+    const texto = document.createTextNode(this.descricao)
+    li.appendChild(checkbox)
+    li.appendChild(texto)
+    return li
+  }
+}
 
 function registrarNovaTarefa(evento) {
   evento.preventDefault()
@@ -61,7 +57,7 @@ function registrarNovaTarefa(evento) {
   const descricao = dadosDoForm.get('descricao')
 
   // chamada do construtor de uma nova instância
-  const item = new Item(descricao)
+  const item = new Tarefa(descricao)
 
   todasTarefas.push(item)
 
@@ -74,9 +70,9 @@ function registrarNovaTarefa(evento) {
 function atualizarTela() {
   listaTarefas.innerHTML = ''
 
-  for (let tarefa of todasTarefas) {
+  todasTarefas.forEach(tarefa => {
     listaTarefas.appendChild(tarefa.montaItem())
-  }
+  })
 }
 
 formTratefa.addEventListener('submit', registrarNovaTarefa)
