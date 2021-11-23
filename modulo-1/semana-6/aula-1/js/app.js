@@ -1,6 +1,7 @@
 const formTratefa = document.querySelector('#formulario-tarefa')
 const listaTarefas = document.querySelector('#lista-tarefas')
 
+// inicializa o vetor de tarefas
 const todasTarefas = []
 
 class Item {
