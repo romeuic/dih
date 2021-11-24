@@ -1,0 +1,24 @@
+@import "reset.css";
+@import "leiaute.css";
+@import "formulario.css";
+
+#formulario-tarefa {
+  display: flex;
+  flex-direction: row;
+  gap: 5mm;
+}
+
+#formulario-tarefa div.campos {
+  flex-grow: 1;
+}
+
+#lista-tarefas {
+  padding: 5mm 0;
+  list-style: none;
+}
+
+#lista-tarefas>li {
+  padding: 2.5mm 5mm;
+  margin-bottom: 2.5mm;
+  border: 1px solid #ccc;
+}
