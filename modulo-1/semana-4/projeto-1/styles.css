@@ -1,0 +1,17 @@
+html,
+body,
+button,
+h1 {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+#contador {
+  font-size: 30vh;
+}
