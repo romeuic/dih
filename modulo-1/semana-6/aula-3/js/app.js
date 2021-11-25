@@ -1,55 +1,10 @@
+import Tarefa from './Tarefa.js'
+
 const formTratefa = document.querySelector('#formulario-tarefa')
 const listaTarefas = document.querySelector('#lista-tarefas')
 
 // inicializa o vetor de tarefas
 const todasTarefas = []
-
-class Item {
-  static #nextId = 0
-  #id
-  descricao
-
-  constructor(desc = '') {
-    this.#id = Item.#nextId++
-    this.descricao = desc
-  }
-
-  get id() {
-    return this.#id
-  }
-
-  montaItem() {
-    const li = document.createElement('li')
-    li.innerHTML = this.descricao
-    return li
-  }
-}
-
-
-class Tarefa extends Item {
-  #status
-
-  constructor(desc, stat = false) {
-    super(desc)
-    this.#status = stat
-  }
-
-  montaItem() {
-    const li = document.createElement('li')
-    const checkbox = document.createElement('input')
-    checkbox.type = 'checkbox'
-    checkbox.checked = this.#status
-
-    checkbox.onclick = () => {
-      this.#status = checkbox.checked
-    }
-
-    const texto = document.createTextNode(this.descricao)
-    li.appendChild(checkbox)
-    li.appendChild(texto)
-    return li
-  }
-}
 
 function registrarNovaTarefa(evento) {
   evento.preventDefault()
