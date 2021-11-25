@@ -26,6 +26,7 @@ function registrarNovaTarefa(evento) {
 function atualizarTela() {
   listaTarefas.innerHTML = ''
 
+  // exemplo de uso de função de array
   todasTarefas.forEach(tarefa => {
     listaTarefas.appendChild(tarefa.montaItem())
   })
