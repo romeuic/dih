@@ -52,9 +52,19 @@ const funcionarios = [
  * @param  {Array} vetor Funcionários
  * @return {Number} Total dos salários
  */
+// const calcularSalarios = vetor => {
+//   return vetor.reduce((acc, cur) => acc + cur.salario, 0)
+// }
 const calcularSalarios = vetor => {
-  return vetor.reduce((acc, cur) => acc + cur.salario, 0)
+  let acumulador = 0
+  for (let i = 0; i < vetor.length; i++) {
+    acumulador = acumulador + vetor[i].salario
+  }
+  //vetor.forEach(cur => acc += cur.salario)
+  return acumulador
 }
-//romeu.imprime()
-console.log(funcionarios)
-console.log(calcularSalarios(funcionarios))
+//console.log(calcularSalarios(funcionarios))
+//funcionarios.forEach(item => item.imprime())
+console.log(
+  Funcionario.calcularSalarios(funcionarios)
+)
