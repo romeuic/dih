@@ -135,7 +135,7 @@ class Conta {
   }
 }
 
-const end = new Endereco(
+const endRomeu = new Endereco(
   'Rod. Admar Gonzaga',
   '2765',
   'Florianópolis',
@@ -144,23 +144,95 @@ const end = new Endereco(
   '80034-001'
 )
 
-const romeu = new Cliente(
+const clienteRomeu = new Cliente(
   'Romeu',
   '12345678909',
-  end,
+  endRomeu,
   '+5555999999999'
 )
 
-const conta = new Conta(
+const contaRomeu = new Conta(
   '23456',
-  0,
-  romeu
+  1000,
+  clienteRomeu
 )
 
-console.log(conta)
+const contaDois = new Conta(
+  '23457',
+  1000,
+  clienteRomeu
+)
+
+//console.log(contaRomeu)
 
 /*
 for (let i = 0; i < retangulos.length; i++) {
   console.log(retangulos[i].calcularArea())
 }
 */
+
+// Ex. 8
+
+class Transacao {
+  static #lastId = 0
+  #idDeTransacao
+  data
+  conta
+  contaTransferencia
+  valorDaTransacao
+
+  constructor(valorDaTransacao, conta, contaTransferencia) {
+    if (!(conta instanceof Conta)) {
+      throw 'Conta inválida!'
+    }
+    if (typeof valorDaTransacao !== 'number') {
+      throw 'Valor inválido!'
+    }
+    this.#idDeTransacao = ++Transacao.#lastId
+    this.conta = conta
+    this.valorDaTransacao = valorDaTransacao
+    this.data = Intl.DateTimeFormat().format()
+    this.contaTransferencia =
+      contaTransferencia instanceof Conta
+      ? contaTransferencia
+      : null
+  }
+
+  #trasferencia() {
+    if (!this.contaTransferencia) return
+    if (this.conta.saldo - this.valorDaTransacao < 0) {
+      alert('Saldo insuficiente!')
+      return
+    }
+    this.conta.saldo -= this.valorDaTransacao
+    this.contaTransferencia.saldo += this.valorDaTransacao
+  }
+
+  #deposito() {
+    if (this.valorDaTransacao > 300) {
+      alert('Valor máximo de depósito excedido!')
+      return
+    }
+    this.conta.saldo += this.valorDaTransacao
+  }
+
+  executaTransacao() {
+    if (this.conta) {
+      if (this.contaTransferencia) {
+        this.#trasferencia()
+      } else {
+        this.#deposito()
+      }
+    }
+  }
+}
+
+new Transacao(300, contaRomeu, contaDois)
+const transRomeu = new Transacao(300, contaRomeu, contaDois)
+
+transRomeu.executaTransacao()
+
+console.log(contaRomeu)
+console.log(contaDois)
+console.log(transRomeu)
+
