@@ -21,15 +21,18 @@ const verificarCEPsincrono = event => {
 
 // exemplo timeout callback
 const verificarCEPtimeout = event => {
+  console.log('INICIO')
   // reseta resultado
   let resultado = ''
   // simula busca
   setTimeout(() => {
     // define resultado
+    console.log('MEIO')
     resultado = 'Rodovia Admar Gonzaga'
   }, 0)
   // mostra resultado ???
   pTela.innerHTML = resultado
+  console.log('FIM')
 }
 
 
@@ -75,7 +78,7 @@ const verificarCEPpromise = event => {
 
 // exemplo fetch
 const verificarCEPfetch = event => {
-  const cep = campoCep.value.replace('-', '')
+  const cep = campoCep.value
   // simula busca
   fetch(`https://viacep.com.br/ws/${cep}/json`)
     .then(resposta => resposta.json())
@@ -88,7 +91,7 @@ const verificarCEPfetch = event => {
     .catch(erro => {
       // caso tiver problema
       // exibe erro
-      console.error(erro)
+      console.error('CATCH:' + erro)
       pTela.innerHTML = erro
     })
 }
@@ -123,7 +126,7 @@ const verificarCEPall = event => {
   const cep = campoCep.value
   pTela.innerHTML = ''
   // simula busca
-  const pViacep = fetch(`https://viacep.com.br/ws/${cep.replace('-', '')}/json`)
+  const pViacep = fetch(`https://viacep.com.br/ws/${cep}/json`)
   const pApicep = fetch(`https://ws.apicep.com/cep/${cep}.json`)
 
   Promise.all([pViacep, pApicep])
@@ -152,6 +155,6 @@ const verificarCEPall = event => {
 //botaoCep.addEventListener('click', verificarCEPtimeout)
 //botaoCep.addEventListener('click', verificarCEPcallback)
 //botaoCep.addEventListener('click', verificarCEPpromise)
-//botaoCep.addEventListener('click', verificarCEPfetch)
+botaoCep.addEventListener('click', verificarCEPfetch)
 //botaoCep.addEventListener('click', verificarCEPrace)
-botaoCep.addEventListener('click', verificarCEPall)
+//botaoCep.addEventListener('click', verificarCEPall)

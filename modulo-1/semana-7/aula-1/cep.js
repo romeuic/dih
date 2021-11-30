@@ -26,17 +26,14 @@ export function buscaCEPcallback(cep, callback) {
 
 // exemplo promise
 export function buscaCEPpromise(cep) {
-
   return new Promise((resolve, reject) => {
-
     const resultado = listaCEPs[cep]
-
     const erro = resultado ? null : 'CEP inválido!'
 
     if (erro) {
-      reject(erro)
+      reject(erro) // vai executar o catch
     } else {
-      resolve(resultado)
+      resolve(resultado) // vai executar o then
     }
   })
 }
