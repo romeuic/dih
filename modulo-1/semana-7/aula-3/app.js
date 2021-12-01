@@ -1,18 +1,3 @@
-const listaCEPs = {
-  '88034001': {
-    cep: '88034-001',
-    logradouro: 'Rodovia Admar Gonzaga',
-    complemento: 'de 2026/2027 a 3787/3788',
-    bairro: 'Itacorubi',
-    localidade: 'Florianópolis',
-    uf: 'SC',
-    ibge: '4205407',
-    gia: '',
-    ddd: '48',
-    siafi: '8105'
-  }
-}
-
 const campoCep = document.querySelector('#campo-cep')
 const botaoCep = document.querySelector('#botao-cep')
 const pTela = document.querySelector('#p-tela')
