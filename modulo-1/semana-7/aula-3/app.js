@@ -78,3 +78,25 @@ async function buscaCEPfetch() {
 
 //botaoCep.addEventListener('click', buscaCEP)
 botaoCep.addEventListener('click', buscaCEPfetch)
+
+
+function teste(a, b, ...rest) {
+  console.log(a, b, rest)
+}
+
+//teste(1, 4, 8, 3, 0)
+
+const pegaImagen = async () => {
+  try {
+    const resposta = await fetch('https://api.thecatapi.com/v1/images/search')
+    const objeto = await resposta.json()
+    const [{ url }] = objeto
+    const img = document.createElement('img')
+    img.src = url
+    pTela.appendChild(img)
+  } catch (error) {
+    console.error('Pegou: ' + error)
+  }
+}
+
+//pegaImagen()
