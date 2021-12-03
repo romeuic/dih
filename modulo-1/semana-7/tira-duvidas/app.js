@@ -19,17 +19,17 @@ const consultaCepP = () => {
 }
 
 async function consultaCep() {
-    try {
-      const cep = campoCep.value
-      const url = `https://viacep.com.br/ws/${cep}/json`
-      const response = await fetch(url)
-      const objeto = await response.json()
-      pTela.innerHTML = objeto.logradouro
-      console.log('Terminou a busca:', objeto)
-    }
-    catch(error) {
-      pTela.innerHTML = 'Erro!<br>' + error
-    }
+  try {
+    const cep = campoCep.value
+    const url = `https://viacep.com.br/ws/${cep}/json`
+    const response = await fetch(url)
+    const objeto = await response.json()
+    pTela.innerHTML = objeto.logradouro
+    console.log('Terminou a busca:', objeto)
+  }
+  catch(error) {
+    pTela.innerHTML = 'Erro!<br>' + error
+  }
 }
 
 consultaCep()
