@@ -58,7 +58,7 @@ const objB = { d: 4, e: 5, f: 6 }
 
 const objC = { ...objB, ...objA }
 
-console.log(objC)
+//console.log(objC)
 
 // Exempo: Semana5 - Ex.3
 class Endereco {
@@ -69,3 +69,14 @@ class Endereco {
     }
   }
 }
+
+
+// Exemplo: Semana 3 Ex.6
+
+const agora = new Date()
+const ano = agora.getFullYear()
+const inicioAno = new Date(`${ano}/01/01`)
+
+console.log(inicioAno)
+console.log(agora)
+console.log(inicioAno < agora)
