@@ -32,8 +32,30 @@ async function consultaCep() {
   }
 }
 
-consultaCep()
+//consultaCep()
 
-console.log('Eu executo primeiro')
+//console.log('Eu executo primeiro')
 
 botaoCep.addEventListener('click', consultaCep)
+
+
+// Ex.2
+
+const vetA = [1, 2, 3]
+const vetB = [4, 5, 6]
+
+function concatena(va, vb) {
+  return [...va, ...vb]
+}
+
+const concatenado = concatena(vetA, vetB)
+
+//console.log(concatenado)
+
+
+const objA = { a: 1, b: 2, c: 3 }
+const objB = { d: 4, e: 5, f: 6 }
+
+const objC = { ...objB, ...objA }
+
+console.log(objC)
